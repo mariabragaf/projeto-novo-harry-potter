@@ -6,3 +6,9 @@ export const encontreTodos = async () => {
     orderBy: { nome: 'asc' }
    });
 }
+
+export const encontreUm = async (id) => {
+   return await prisma.bruxo.findUnique({
+      where: { id: Number(id) }
+   })
+}
